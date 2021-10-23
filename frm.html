@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOOK OP</title>
+	<link rel="icon" href="C:\xampp\htdocs\logo1.jpg">
+	<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+header{
+	color: white;
+	background-image: url("logo1.jpg");
+	background-repeat: no-repeat;
+	
+}
+
+header, footer{
+    padding: 1em;
+    background-color: #1BBCF2;
+    clear: left;
+    text-align: center;
+    color:white;
+}
+
+nav {
+    float: left;
+    height: 500px;
+    max-width: 160px;
+    margin: 0px;
+    padding: 1em;
+    background-color:#3FBDBF;
+    width: 200px;
+}
+
+nav ul {
+    list-style-type: none;    
+}
+   
+nav ul a {
+
+	padding-right: 20px;
+    text-decoration: none;
+     color: white;
+     font-size: 20px;
+     margin-top: 10px 10px 10px 10px;
+}
+
+article {
+    height: 500px;
+    width: 1500px;
+}
+input
+{
+   background-color:white;
+}
+input:hover
+{
+cursor: pointer;
+background-color: lightblue;
+}
+fieldset { 
+	background-color: lightgreen;
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove (internal value);
+    width: 50%;
+    height: 500px;
+}
+</style>
+<script type="text/javascript">
+	function myfun(){
+		var phone=document.getElementById("phone1").value;
+		valid=true;
+		if (phone==" ") {
+			alert("Please enter the contact number");
+			document.form.phone.focus();
+			valid=false;
+        }
+        if (isNaN(phone)) {
+
+        	alert("Enter the valid Mobile Number(Like:9566137117)");
+        	document.form.phone.focus();
+        	valid=false;
+        }
+        return valid;
+    }
+</script>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>MEDICOM HOSPITAL</h1>
+</header>
+ <nav>
+  <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="hsabtus.html">ABOUTUS</a></li>
+    <li><a href="department.html">DEPARTMENTS</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="contact.html">CONTACTUS</a>
+  </ul>
+</nav>
+<article>
+<center><form name="myform" onsubmit="return myfun()">
+<fieldset>
+<legend>MAKE AN APPOINTMENT</legend>
+<table>
+<tr>
+<td>NAME:</td><td><input type="text" name="name" value="Name" required></td>
+</tr><br><br>
+<tr>
+<td>MOBILE:</td>
+<td><input type="number" name="num" value="Mobile"></td>
+</tr><br><br>
+<tr>
+<td>EMAIL:</td>
+<td><input type="email" name="em" value="Email"><span id="phone1"></span></td>
+</tr><br><br>
+<tr><td>DEPARTMENT:</td><td><select>
+<option>Anaesthesiology</option>
+<option>Cardiology</option>
+<option>Critical Care</option>
+<option>Diabetology</option>
+<option>Emergency Medicine</option>
+<option>ENT</option>
+<option>Gastrioentrology</option>
+<option>General Medicine</option>
+<option>Gynaecology</option>
+<option>Neurology</option>
+<option>Neurosurgarys</option>
+<option>Orthopaedics</option>
+<option>Paediatric Surgary</option>
+</select></td>
+</tr><br><br>
+<tr>
+<td>DOCTER:</td>
+<td><select>
+	<option>Name1</option>
+	<option>Name2</option>
+	<option>Name3</option>
+    </select></td></tr><br><br>
+<tr><td>APPOINMENT DATE:</td>
+<td><input type="date" name="d" value="Date"></td></tr><br><br>
+</table>
+<input type="submit" name="s" value="Submit">
+</fieldset>
+</form></center>
+</article>
+<footer>Copyright © 2018 medicom.org.</footer>
+
+</div>
+</body>
+</html>
